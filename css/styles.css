@@ -4,13 +4,61 @@ body {
   background-color: #fff;
 }
 
+/* RESET */
+
 ol,
 ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  display: block;
 }
 
 a {
   text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* COMMON */
+
+.container {
+  max-width: 1158px;
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.page-header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
 }
 
 .logo {
@@ -23,11 +71,24 @@ a {
   color: #4d5ae5;
 }
 
+.header-logo {
+  padding: 24px 0;
+  margin-right: 76px;
+}
+
 .header-logo .logo-part {
   color: #2e2f42;
 }
 
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-link {
+  display: block;
+  padding: 24px 0;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -37,9 +98,18 @@ a {
 
 .contacts {
   font-style: normal;
+  margin-left: auto;
+}
+
+.contacts-list {
+  display: flex;
+  align-items: center;
+  gap: 40px;
 }
 
 .contacts-link {
+  display: block;
+  padding: 24px 0;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -53,10 +123,19 @@ a {
   color: #404bbf;
 }
 
+/* HERO */
+
 .section-hero {
   background-color: #2e2f42;
 }
+
+.hero-container {
+  padding: 188px 0;
+  text-align: center;
+}
+
 .hero-title {
+  margin-bottom: 48px;
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
@@ -66,13 +145,15 @@ a {
 }
 
 .button-hero {
+  border-radius: 4px;
+  padding: 16px 32px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
   color: #fff;
   background-color: #4d5ae5;
-  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 .button-hero:hover,
@@ -80,7 +161,19 @@ a {
   background-color: #404bbf;
 }
 
+/* BENEFITS */
+
+.benefits-container {
+  padding: 120px 0;
+}
+
+.benefits-list {
+  display: flex;
+  gap: 24px;
+}
+
 .benefits-list-item {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -89,6 +182,7 @@ a {
 }
 
 .benefits-item-text {
+  max-width: 260px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
@@ -96,9 +190,17 @@ a {
   color: #434455;
 }
 
+/* TEAM */
+
 .section-team {
   background-color: #f4f4fd;
 }
+
+.team-container {
+  text-align: center;
+  padding: 120px 0;
+}
+
 .team-title {
   font-weight: 700;
   font-size: 36px;
@@ -107,13 +209,25 @@ a {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  gap: 24px;
 }
 
 .team-list-item {
   background-color: #ffffff;
+  border-radius: 0 0 4px 4px;
+  padding: 0px 0px 32px 0px;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .team-list-name {
+  padding-top: 32px;
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -130,15 +244,14 @@ a {
   color: #434455;
 }
 
-.footer {
-  background-color: #2e2f42;
-}
+/* PORTFOLIO */
 
-.footer-logo .logo-part {
-  color: #f4f4fd;
+.portfolio-container {
+  padding: 120px 0;
 }
 
 .portfolio-title {
+  margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
@@ -148,7 +261,21 @@ a {
   text-transform: capitalize;
 }
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px 24px;
+}
+
+.portfolio-list-text {
+  border-bottom: 1px solid #e7e9fc;
+  border-left: 1px solid #e7e9fc;
+  border-right: 1px solid #e7e9fc;
+  padding: 32px 16px;
+}
+
 .portfolio-list-item {
+  margin-bottom: 8px;
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
@@ -164,7 +291,20 @@ a {
   color: #434455;
 }
 
+/* FOOTER */
+
+.footer-container {
+  padding: 100px 0 100px 156px;
+  background-color: #2e2f42;
+}
+
+.footer-logo .logo-part {
+  color: #f4f4fd;
+}
+
 .footer-text {
+  max-width: 300px;
+  margin-top: 16px;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
